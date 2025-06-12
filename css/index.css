@@ -1,0 +1,237 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Noto Sans", sans-serif;    
+  background: #1a1e24;
+  color: #fff;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  background-color: #000; 
+  padding: 0 2rem; 
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+}
+
+.nav-menu li:hover {
+  color: #00A8E1;
+}
+
+.nav-menu li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00A8E1; 
+  left: 0;
+  bottom: -5px;
+  transition: width 0.5s ease;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+.me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 15vw;
+  background-color: #1a1e24;
+  flex-wrap: wrap;
+}
+
+.me-left {
+  text-align: center;
+}
+
+.profile-img {
+  height: 22rem;
+  width: 22rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.name-text {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.typewriter {
+  font-size: 1.5rem;
+  color: #00A8E1;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00A8E1;
+  width: 0;
+  animation: typing 23s steps(26, end) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  13% { width: 25ch; }
+  100% { width: 25ch; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #00A8E1; }
+}
+
+
+.skills, .contact {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.skills-title, .contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5rem;
+}
+
+.skills-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  flex: 1 1 280px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #00A8E1;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border-color: #C3073F;
+}
+
+.skill-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Zorgt dat alle project-cards even hoog worden */
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #1a1e24;
+}
+
+.project {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Duwt elementen naar boven/onder als nodig */
+  height: 100%;
+  height: 30rem; 
+  max-width: 350px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #C3073F;
+  border-radius: 0.5rem;
+  color: #fff;
+  text-align: left;
+}
+
+.project:hover{
+  transform: translatey(-8px);
+  transition: 0.6s;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 10rem;
+}
+
+.used-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+}
+
+.used{
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  transform: translateY(-0.2rem);
+  background-color: #00A8E1;
+  color: #211951;
+}
+
+.logos{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.website{
+  color: 	#A8E100;
+}
+
+.github-logo{
+  color: 	#E100A8;
+}
+
+.website:hover {
+  cursor: pointer;
+} 
+
+.github-logo:hover{
+  cursor: pointer;
+}
