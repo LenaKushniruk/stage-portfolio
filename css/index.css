@@ -1,44 +1,41 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: "Noto Sans", sans-serif;    
+body {
+  font-family: "Noto Sans", sans-serif;
   background: #1a1e24;
   color: #fff;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 5rem;
-  background-color: #000; 
-  padding: 0 2rem; 
+  background: #000;
+  padding: 0 2rem;
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 6rem;
   font-size: 1.3rem;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-menu li {
   position: relative;
   cursor: pointer;
   text-align: center;
-  color: white;
+  color: #fff;
+  transition: color 0.3s;
 }
 
 .nav-menu li:hover {
@@ -48,9 +45,9 @@ html{
 .nav-menu li::after {
   content: '';
   position: absolute;
-  width: 0%;
+  width: 0;
   height: 2px;
-  background-color: #00A8E1; 
+  background: #00A8E1;
   left: 0;
   bottom: -5px;
   transition: width 0.5s ease;
@@ -62,11 +59,11 @@ html{
 
 .me {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem 15vw;
-  background-color: #1a1e24;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 15vw;
+  background: #1a1e24;
 }
 
 .me-left {
@@ -74,8 +71,8 @@ html{
 }
 
 .profile-img {
-  height: 22rem;
   width: 22rem;
+  height: 22rem;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -84,7 +81,6 @@ html{
 
 .name-text {
   font-size: 1.8rem;
-  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -100,8 +96,7 @@ html{
 
 @keyframes typing {
   0% { width: 0; }
-  13% { width: 25ch; }
-  100% { width: 25ch; }
+  13%, 100% { width: 25ch; }
 }
 
 @keyframes blink {
@@ -109,11 +104,10 @@ html{
   50% { border-color: #00A8E1; }
 }
 
-
 .skills, .contact {
-  padding: 4rem 2rem;
   max-width: 1000px;
   margin: auto;
+  padding: 4rem 2rem;
 }
 
 .skills-title, .contact-title {
@@ -135,14 +129,14 @@ html{
   background: rgba(255, 255, 255, 0.05);
   padding: 1.5rem;
   border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
   border: 1px solid #00A8E1;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .skill-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-color: #C3073F;
 }
 
@@ -159,40 +153,39 @@ html{
 
 .projects {
   display: flex;
-  justify-content: center;
-  align-items: stretch; /* Zorgt dat alle project-cards even hoog worden */
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   padding: 4rem 2rem;
-  background-color: #1a1e24;
+  background: #1a1e24;
+  align-items: stretch;
 }
 
 .project {
   flex: 1 1 300px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Duwt elementen naar boven/onder als nodig */
-  height: 100%;
-  height: 30rem; 
-  max-width: 350px;
+  justify-content: space-between;
+  height: 30rem;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid #C3073F;
   border-radius: 0.5rem;
   color: #fff;
   text-align: left;
+  transition: transform 0.6s;
 }
 
-.project:hover{
-  transform: translatey(-8px);
-  transition: 0.6s;
+.project:hover {
+  transform: translateY(-8px);
 }
 
 .project img {
   width: 100%;
+  height: 10rem;
   border-radius: 0.5rem;
   object-fit: cover;
-  height: 10rem;
 }
 
 .used-container {
@@ -204,34 +197,28 @@ html{
   border-radius: 0.625rem;
 }
 
-.used{
+.used {
   padding: 0.6rem 1rem;
   border-radius: 0.3rem;
   text-align: center;
-  transform: translateY(-0.2rem);
-  background-color: #00A8E1;
+  background: #00A8E1;
   color: #211951;
+  transform: translateY(-0.2rem);
 }
 
-.logos{
+.logos {
   display: flex;
   justify-content: center;
   gap: 1rem;
   font-size: 1.5rem;
 }
 
-.website{
-  color: 	#A8E100;
-}
-
-.github-logo{
-  color: 	#E100A8;
-}
-
-.website:hover {
+.website {
+  color: #A8E100;
   cursor: pointer;
-} 
+}
 
-.github-logo:hover{
+.github-logo {
+  color: #E100A8;
   cursor: pointer;
 }
