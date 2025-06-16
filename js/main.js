@@ -1,15 +1,16 @@
-document.getElementById('aboutme-button').addEventListener('click', () => {
-  document.getElementById('aboutme').scrollIntoView({ behavior: 'smooth' });
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollTo = (btnId, targetId) => {
+    document.getElementById(btnId).addEventListener("click", () => {
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  };
+
+  scrollTo("aboutme-button", "about");
+  scrollTo("skills-button", "skills");
+  scrollTo("projects-button", "projects");
+  scrollTo("contact-button", "contact");
 });
 
-document.getElementById('skills-button').addEventListener('click', () => {
-  document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.getElementById('projects-button').addEventListener('click', () => {
-  document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.getElementById('contact-button').addEventListener('click', () => {
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-});

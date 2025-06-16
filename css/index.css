@@ -4,17 +4,23 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
   background: #1a1e24;
   color: #fff;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Navbar */
 .navbar {
+  position: fixed;          
+  top: 0;                   
+  left: 0;
+  width: 100%;               
+  z-index: 1000;             
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,11 +51,12 @@ html {
 .nav-menu li::after {
   content: '';
   position: absolute;
-  width: 0;
+  display: block;
   height: 2px;
   background: #00A8E1;
   left: 0;
   bottom: -5px;
+  width: 0;
   transition: width 0.5s ease;
 }
 
@@ -57,6 +64,7 @@ html {
   width: 100%;
 }
 
+/* About */
 .me {
   display: flex;
   flex-wrap: wrap;
@@ -104,18 +112,21 @@ html {
   50% { border-color: #00A8E1; }
 }
 
-.skills, .contact {
-  max-width: 1000px;
-  margin: auto;
-  padding: 4rem 2rem;
-}
-
-.skills-title, .contact-title {
+/* Shared Section Titles */
+.section-title, .skills-title, .contact-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
   border-bottom: 2px solid #fff;
   padding-bottom: 0.5rem;
+}
+
+
+/* Skills */
+.skills, .contact {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 2rem;
 }
 
 .skills-menu {
@@ -151,6 +162,7 @@ html {
   color: #e0e0e0;
 }
 
+/* Projects */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -221,4 +233,44 @@ html {
 .github-logo {
   color: #E100A8;
   cursor: pointer;
+}
+
+#contact {
+  text-align: center;          
+  padding-top: 20px; 
+}
+
+#contact .contact-title {
+  margin-bottom: 20px;         
+}
+
+#contact i {
+  font-size: 40px;             
+  margin: 0 15px;              
+  display: inline-block;      
+  vertical-align: middle;
+  cursor: pointer;             
+}
+
+.contact-block i {
+  cursor: pointer; /* Zorgt dat de cursor verandert als je over het icoon hovert */
+  transition: color 0.3s ease; /* Voor een mooie overgang van kleur */
+}
+
+.contact-block i:hover {
+  color: #A8E100; /* Kies hier je gewenste hoverkleur */
+}
+
+.contact-block {
+  width: 20rem;
+  height: 20rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem; /* 👈 Mooier afgeronde hoeken */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #00A8E1;
 }
