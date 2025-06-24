@@ -237,42 +237,70 @@ body {
   cursor: pointer;
 }
 
-#contact {
-  text-align: center;          
-  padding-top: 20px; 
-}
-
-#contact .contact-title {
-  margin-bottom: 20px;         
-}
-
-#contact i {
-  font-size: 40px;             
-  margin: 0 15px;              
-  display: inline-block;      
-  vertical-align: middle;
-  cursor: pointer;             
-}
-
-.contact-block i {
-  cursor: pointer; /* Zorgt dat de cursor verandert als je over het icoon hovert */
-  transition: color 0.3s ease; /* Voor een mooie overgang van kleur */
-}
-
-.contact-block i:hover {
-  color: #A8E100; /* Kies hier je gewenste hoverkleur */
-}
-
 .contact-block {
   width: 20rem;
-  height: 20rem;
+  height: auto;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 2rem; /* 👈 Mooier afgeronde hoeken */
+  border-radius: 2rem;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5rem auto 0 auto;
   border: 2px solid #00A8E1;
+  padding: 2rem;
+  flex-wrap: wrap; /* zorgt voor mobielvriendelijkheid */
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  margin: 1rem;
+}
+
+.contact-item i {
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-item i:hover {
+  color: #A8E100;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Algemeen hover-effect voor alle iconen */
+.contact-item i {
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-item i:hover {
+  color: #A8E100;
+}
+
+#mail-contact {
+  cursor: default;
+}
+
+#mail-contact:hover {
+  color: white; 
+} 
+
+
+@media (max-width: 480px) {
+  .nav-menu {
+    gap: 20px; /* minder ruimte op kleinere schermen */
+  }
+
+  .nav-menu li {
+    font-size: 20px; /* iets kleinere tekst zodat het past */
+  }
 }
