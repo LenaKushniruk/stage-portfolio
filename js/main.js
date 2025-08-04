@@ -58,7 +58,13 @@ const projectLinks = [
     githubUrl: "https://github.com/LenaKushniruk/stage-opdracht1",
     websiteId: "website-icon5",
     websiteUrl: "https://34978.hosts1.ma-cloud.nl/stage-opdracht1/"
-  }
+  },
+  {
+    githubId: "github-icon6",
+    githubUrl: "https://github.com/LenaKushniruk/Tech_jam",
+    websiteId: "website-icon6",
+    websiteUrl: "https://34978.hosts1.ma-cloud.nl/Tech_jam-main/"
+  },
 ];
 
 projectLinks.forEach(({ githubId, githubUrl, websiteId, websiteUrl }) => {
